@@ -1,0 +1,35 @@
+/*minifyOnSave, minifier: clean-css, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: $1.min.$2 */
+#gdpr_alert {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0.8em;
+	background-color: var(--gdpr-bkgrd);
+	font-size: 0.9em;
+	color: var(--gdpr-text-clr);
+	z-index: 10000;
+}
+#gdpr_alert a {
+	font-weight: bold;
+}
+.gdpr-buttons {
+	padding: 0.5em;
+}
+.button.gdpr {
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 1em;
+	padding: 0.5em;
+}
+#consent.button.gdpr {
+	border-color: var(--gdpr-consent-clr);
+	color: var(--gdpr-consent-clr);
+	font-weight: bold;
+}
+#decline.button.gdpr {
+	border-color: var(--gdpr-decline-clr);
+	color: var(--gdpr-decline-clr);
+}

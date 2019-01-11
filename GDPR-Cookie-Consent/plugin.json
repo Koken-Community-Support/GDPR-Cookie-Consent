@@ -1,0 +1,144 @@
+{
+	"name": "GDPR Cookie Consent",
+	"description": "GDPR cookie consent for Koken in Javascript.",
+	"description_long": "GDPR cookie consent in Javascript. It effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given",
+	"documentation": "http://varoystrand.se",
+	"version": "1.0.0",
+	"demo": "http://varoystrand.se",
+	"author": {
+		"name": "Bjarne Varoystrand",
+		"link": "http://varoystrand.se"
+	},
+
+	"koken_version_required": "0.20.4",
+
+	"data": {
+		"infoText": {
+			"label": "Alert text",
+			"type": "string",
+			"value": "We don't use your private data for profiling or tracking. Storing of cookies on your device is prevented until you give us explicit consent. By continuing to browse this website you agree with our ",
+			"validation": {
+				"type": "not_empty"
+			}
+		},
+		"privacyText": {
+			"label": "Alert text 2",
+			"type": "string",
+			"value": "Privacy Policy",
+			"validation": {
+				"type": "not_empty"
+			}
+		},
+		"privacyLink": {
+			"label": "Link to privacy policy",
+			"type": "string",
+			"value": "/pages/privacy-policy/",
+			"placeholder": "/pages/privacy-policy/",
+			"validation": {
+				"type": "not_empty",
+				"error_message": "You need to provide a privacy policy url"
+			}
+		},
+		"buttonConsent": {
+			"label": "Consent button",
+			"type": "string",
+			"value": "I Consent",
+			"validation": {
+				"type": "not_empty",
+				"error_message": "The button needs some text"
+			}
+		},
+		"buttonDecline": {
+			"label": "Decline button",
+			"type": "string",
+			"value": "I Decline",
+			"validation": {
+				"type": "not_empty",
+				"error_message": "The button needs some text"
+			}
+		},
+		"textSettings": {
+			"label": "Display color settings",
+			"type": "boolean",
+			"value": false
+		},
+		"gdprBkgrd": {
+			"label": "Background Color",
+			"type": "color",
+			"value": "#d3d3d3",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"gdprTextClr": {
+			"label": "Text Color",
+			"type": "color",
+			"value": "#000000",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"consentClr": {
+			"label": "Consent Button Color",
+			"type": "color",
+			"value": "#000000",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"declineClr": {
+			"label": "Decline Button Color",
+			"type": "color",
+			"value": "#808080",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"advancedSettings": {
+			"label": "Display Advanced Settings",
+			"info": "Only change this if you know what your doing",
+			"type": "boolean",
+			"value": false
+		},
+		"activateAll": {
+			"label": "Display for",
+			"type": "select",
+			"options": [
+				{ "value": "true", "label": "All visitors" },
+				{ "value": "false", "label": "Only for visitors from EU" }
+			],
+			"value": "false",
+			"info": "Set it to \"All visitors\" if you want to activate consent management for all visitors regardless of geolocation. Leave as is and consent management is only active for EU locations",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "advancedSettings", "equals": true }
+				]
+			}
+		},
+		"ignoredCookie": {
+			"label": "Ignored Cookie",
+			"type": "string",
+			"value": "session_cookie",
+			"info": "If you really really need session cookie",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "advancedSettings", "equals": true }
+				]
+			}
+		}
+	}
+}
