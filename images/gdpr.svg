@@ -1,0 +1,38 @@
+<svg id="GDPR" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1350 -900 2700 1200" xml:space="preserve">
+	<defs>
+		<path id="Star" d="m 0,-100 22.4514,69.0983 72.6543,0 L 36.3276,11.8034 58.7785,80.9017 0,38.1966 l -58.7785,42.7051 22.4509,-69.0983 -58.7781,-42.7051 72.6543,0 z"/>
+		<linearGradient id="linearGradient3560" y2="-147.97" gradientUnits="userSpaceOnUse" y1="-310.04999" gradientTransform="matrix(6.3063111,0,0,6.7416308,-2437.6671,1430.0735)" x2="387.75" x1="381.89001">
+			<stop id="stop3919-9" offset="0" stop-color="#edf4fd" stop-opacity=".52846"/>
+			<stop id="stop3921-0" offset="1" stop-color="#175bb3" stop-opacity="0"/>
+		</linearGradient>
+	</defs>
+	<g id="wrapper" transform="matrix(0.66176095,0,0,0.65704813,-831.49781,-271.32681)">
+		<g id="AzureSky" fill="#039" stroke-width="0" transform="matrix(1.5118126,0,0,0.85618163,1272.7922,-32.35913)">
+			<rect id="background" x="-1350" y="-900" width="2700" height="1800"/>
+		</g>
+		<g id="text" fill="#eee" style="font-size:14em;font-family:sans-serif;filter:drop-shadow(0.1em 0.1em 0.05em rgba(24, 24, 24, 0.7));">
+			<text y="0" x="800">GDPR Cookie Consent</text>
+			<text x="800" y="250" width="100%">For Koken</text>
+		</g>
+		<path id="globe" fill="url(#linearGradient3560)" stroke-width="1.89999998" d="m 7.594524,-714.63445 c -381.960094,0 -691.617754,331.20692 -691.617754,739.516163 0,26.041295 1.33377,51.643295 3.79103,76.991297 337.43155,129.95664 853.09857,224.63775 1379.52872,-73.521345 0.005,-1.158617 0,-2.310086 0,-3.469952 0,-408.323123 -309.69136,-739.516163 -691.617751,-739.516163 z"/>
+		<g id="lock" fill="#eee" stroke-width="1.89999998" transform="matrix(6.7396,0,0,6.9399039,-5069.392,-5016.6809)">
+			<path id="top" d="m 729.75,660.3 c -6.5919,0 -11.875,5.3085 -11.875,11.906 l 0,25.188 12.719,0 0,-14.125 c 0,-6.5978 5.3143,-11.906 11.906,-11.906 l 25.5,0 c 6.5919,0 11.906,5.3085 11.906,11.906 l 0,14.125 12.188,0 0,-25.188 c 0,-6.5978 -5.3143,-11.906 -11.906,-11.906 l -50.438,0 z"/>
+			<path id="center" d="m 716.47,395.12 c -6.5919,0 -11.906,5.3085 -11.906,11.906 l 0,14.969 c 0,6.5978 5.3143,11.906 11.906,11.906 l 75.906,0 c 5.877,0 10.735,-4.2212 11.719,-9.8125 l -11.594,0 c -6.5919,0 -11.906,-3.3938 -11.906,-7.625 0,-4.2312 5.3143,-7.6562 11.906,-7.6562 l 11.781,0 0,-1.7812 c 0,-6.5978 -5.3143,-11.906 -11.906,-11.906 l -75.906,0 z" transform="translate(0,308.27)"/>
+			<path id="bottom" d="m 716.47,749.22 c -6.5919,0 -11.906,5.3085 -11.906,11.906 l 0,14.969 c 0,6.5978 5.3143,11.906 11.906,11.906 l 75.906,0 c 5.877,0 10.735,-4.2212 11.719,-9.8125 l -11.594,0 c -6.5919,0 -11.906,-3.3938 -11.906,-7.625 0,-4.2312 5.3143,-7.6562 11.906,-7.6562 l 11.781,0 0,-1.7812 c 0,-6.5978 -5.3143,-11.906 -11.906,-11.906 l -75.906,0 z"/>
+		</g>
+		<g id="GoldStars" fill="#fc0" stroke-width="0">
+			<use id="star01" width="100%" height="100%" y="-600" xlink:href="#Star"/>
+			<use id="star02" width="100%" height="100%" x="300" y="-519.61499" xlink:href="#Star"/>
+			<use id="star03" width="100%" height="100%" x="519.61499" y="-300" xlink:href="#Star"/>
+			<use id="star04" width="100%" height="100%" x="600" xlink:href="#Star"/>
+			<use id="star05" width="100%" height="100%" x="519.61499" y="300" xlink:href="#Star"/>
+			<use id="star06" width="100%" height="100%" x="300" y="519.61499" xlink:href="#Star"/>
+			<use id="star07" width="100%" height="100%" y="600" xlink:href="#Star"/>
+			<use id="star08" width="100%" height="100%" x="-300" y="519.61499" xlink:href="#Star"/>
+			<use id="star09" width="100%" height="100%" x="-519.61499" y="300" xlink:href="#Star"/>
+			<use id="star10" width="100%" height="100%" x="-600" xlink:href="#Star"/>
+			<use id="star11" width="100%" height="100%" x="-519.61499" y="-300" xlink:href="#Star"/>
+			<use id="star12" width="100%" height="100%" x="-300" y="-519.61499" xlink:href="#Star"/>
+		</g>
+	</g>
+</svg>
