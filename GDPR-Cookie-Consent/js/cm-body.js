@@ -1,8 +1,8 @@
 /* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: $1.min.$2 */
 /*! GDPR-cookie-consent cm-body.js
-*	@copyright	(c) 2018 [@zoxxx](https://github.com/zoxxx)
+*	@copyright	(c) 2015-2019 Bjarne Varoystrand - bjarne ○ kokensupport • com
 *	@license Apache License 2.0
-*	@author: [@zoxxx](https://github.com/zoxxx)
+*	@author: [@zoxxx](https://github.com/zoxxx) & Bjarne Varoystrand (@black_skorpio)
 *	@version 1.0
 *	@description GDPR cookie consent in Javascript. It effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given.
 *	@documentation https://github.com/zoxxx/GDPR-cookie-consent#gdpr-cookie-consent
@@ -11,43 +11,57 @@
 (function () {
 	if (document.cookie.indexOf('CM_cookieConsent=1') === -1) {
 		if (CM_cookieManager.isGdprZone()) {
-			var cookieAlert = document.createElement('div');
-			cookieAlert.setAttribute('id', 'gdpr_alert');
-			var text = document.createTextNode( infoText+' ' );
-			cookieAlert.appendChild( text );
-			var link = document.createElement('a');
-			link.setAttribute('href', privacyLink);
-			link.setAttribute('title', privacyText );
-			link.appendChild(document.createTextNode( privacyText ));
-			cookieAlert.appendChild(link);
+			var gdprDoc		= document;
+			var classBody	= 'gdpr-consent';
+			var idOverlay	= 'gdpr_backdrop';
+			var idAlert		= 'gdpr_alert';
+			var idYes		= 'consent';
+			var idNope		= 'decline';
+			var idFooter	= 'gdpr_foot';
 
-			var btnWrapper = document.createElement('div');
-			btnWrapper.setAttribute('class', 'gdpr-buttons');
+			document.body.classList.add( classBody );
+			var renderOverlay = document.createElement('div');
+			renderOverlay.setAttribute('id', idOverlay);
+			document.body.prepend( renderOverlay );
 
-			var buttonConsent = document.createElement('div');
-			buttonConsent.setAttribute('id', 'consent');
-			buttonConsent.setAttribute('class', 'button gdpr');
-			buttonConsent.appendChild(document.createTextNode( buttonOk ));
+			var cookieAlert		= gdprDoc.getElementById( idAlert );
+			var buttonConsent	= gdprDoc.getElementById( idYes );
+			var buttonClose		= gdprDoc.getElementById( idNope );
+			var gdprFooter		= gdprDoc.getElementById( idFooter );
+
+			var cleaningUp = function() {
+				gdprDoc.body.classList.remove( classBody );
+				if( renderOverlay !=null ) gdprDoc.body.removeChild( renderOverlay );
+				if( cookieAlert !=null ) gdprDoc.body.removeChild( cookieAlert );
+				if( gdprFooter !=null ) gdprDoc.body.removeChild( gdprFooter );
+			}
+
 			var iConsent = function () {
 				CM_cookieManager.consent(true);
-				document.body.removeChild(cookieAlert);
-				document.getElementById("gdpr_options_body").remove();
+				cleaningUp();
+				/*gdprDoc.body.classList.remove( classBody );
+				gdprDoc.body.removeChild( renderOverlay );
+				gdprDoc.body.removeChild( cookieAlert );
+				gdprDoc.body.removeChild( gdprFooter );*/
 			}
 			buttonConsent.onclick = function () { iConsent(); }
-			btnWrapper.appendChild(buttonConsent);
 
-			var buttonClose = document.createElement('div');
-			buttonClose.setAttribute('id', 'decline');
-			buttonClose.setAttribute('class', 'button gdpr');
-			buttonClose.appendChild(document.createTextNode( buttonDecline ));
 			var removeAlert = function () {
-				document.body.removeChild(cookieAlert);
+				cleaningUp();
+				/*gdprDoc.body.classList.remove( classBody );
+				gdprDoc.body.removeChild( renderOverlay );
+				gdprDoc.body.removeChild( cookieAlert );
+				gdprDoc.body.removeChild( gdprFooter );*/
 			}
+			renderOverlay.onclick = function () { removeAlert(); }
 			buttonClose.onclick = function () { removeAlert(); }
-			btnWrapper.appendChild(buttonClose);
-
-			cookieAlert.appendChild(btnWrapper);
-			document.body.appendChild(cookieAlert);
 		}
+	} else {
+	//if ( CM_cookieManager.consent(true) )
+	//if (document.cookie.indexOf('CM_cookieConsent') == 1) {
+		//var gdprDoc		= document;
+		//var idAlert		= 'gdpr_alert';
+		var cookieAlert	= document.getElementById( 'gdpr_alert' );
+		if( cookieAlert !=null ) gdprDoc.body.removeChild( cookieAlert );
 	}
 }) ();
