@@ -7,22 +7,40 @@
 	"demo": "http://varoystrand.se",
 	"author": {
 		"name": "Bjarne Varoystrand",
-		"link": "http://varoystrand.se"
+		"link": "http://kokensupport.com"
 	},
 
 	"koken_version_required": "0.20.4",
 
 	"data": {
-		"infoText": {
-			"label": "Alert text",
+		"headLine": {
+			"label": "Headline",
 			"type": "string",
-			"value": "We don't use your private data for profiling or tracking. Storing of cookies on your device is prevented until you give us explicit consent. By continuing to browse this website you agree with our ",
+			"value": "Welcome to",
 			"validation": {
 				"type": "not_empty"
 			}
 		},
+		"infoTextOne": {
+			"label": "Alert text line 1",
+			"type": "string",
+			"value": "We don't use your private data for profiling or tracking.",
+			"validation": {
+				"type": "not_empty"
+			}
+		},
+		"infoTextTwo": {
+			"label": "Alert text line 2",
+			"type": "string",
+			"value": "Storing of cookies on your device is prevented until you give us explicit consent."
+		},
+		"infoTextThree": {
+			"label": "Alert text line 3",
+			"type": "string",
+			"value": "By continuing to browse this website you agree with our"
+		},
 		"privacyText": {
-			"label": "Alert text 2",
+			"label": "Privacy Link Text",
 			"type": "string",
 			"value": "Privacy Policy",
 			"validation": {
@@ -42,7 +60,7 @@
 		"buttonConsent": {
 			"label": "Consent button",
 			"type": "string",
-			"value": "I Consent",
+			"value": "Ok",
 			"validation": {
 				"type": "not_empty",
 				"error_message": "The button needs some text"
@@ -51,7 +69,7 @@
 		"buttonDecline": {
 			"label": "Decline button",
 			"type": "string",
-			"value": "I Decline",
+			"value": "Decline",
 			"validation": {
 				"type": "not_empty",
 				"error_message": "The button needs some text"
@@ -62,10 +80,33 @@
 			"type": "boolean",
 			"value": false
 		},
+		"gdprBackdrop": {
+			"label": "Backdrop background color",
+			"type": "color",
+			"with_alpha": true,
+			"value": "rgba(0, 0, 0, 0.5)",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
 		"gdprBkgrd": {
 			"label": "Background Color",
 			"type": "color",
 			"value": "#d3d3d3",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"headLineClr": {
+			"label": "Headline Color",
+			"type": "color",
+			"value": "#164194",
 			"dependencies": {
 				"evaluate": "all",
 				"conditions": [
@@ -88,6 +129,39 @@
 			"label": "Consent Button Color",
 			"type": "color",
 			"value": "#000000",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"consentTopClr": {
+			"label": "Consent Button top bkgrd Color",
+			"type": "color",
+			"value": "#b8e356",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"consentEndClr": {
+			"label": "Consent Button bottom bkgrd Color",
+			"type": "color",
+			"value": "#a5cc52",
+			"dependencies": {
+				"evaluate": "all",
+				"conditions": [
+					{ "option": "textSettings", "equals": true }
+				]
+			}
+		},
+		"consentBrdClr": {
+			"label": "Consent border Color",
+			"type": "color",
+			"value": "#83c41a",
 			"dependencies": {
 				"evaluate": "all",
 				"conditions": [
