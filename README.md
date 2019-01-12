@@ -8,7 +8,7 @@ GDPR cookie consent for Koken CMS in Javascript. It effectively prevents setting
 * Customazible information text message
 * Customazible colors
 * Option to ignore specific cookies
-* Option to restrict to EU locations or disregards geolocation and display for everyone
+* Option to restrict to EU locations, or disregards geolocation and display for everyone
 
 ### Credits
 * Original script by [@zoxxx](https://github.com/zoxxx)
