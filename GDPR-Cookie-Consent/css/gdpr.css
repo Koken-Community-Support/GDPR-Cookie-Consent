@@ -14,9 +14,9 @@ body.gdpr-consent #gdpr_backdrop {
 }
 #gdpr_alert {
 	position: fixed;
-	min-height: 414px;
+	min-height: 28.875em;
 	height: auto;
-	max-width: 307px;
+	max-width: 19.1875em;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
@@ -62,6 +62,7 @@ body.gdpr-consent #gdpr_backdrop {
 	text-align: center;
 	padding: 0.5em;
 	margin-top: 2em;
+	margin-bottom: 1em;
 }
 .button.gdpr {
 	display: inline-block;
