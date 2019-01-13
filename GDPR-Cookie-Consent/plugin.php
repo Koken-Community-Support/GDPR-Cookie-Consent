@@ -11,10 +11,10 @@ class KokenCommunityGDPR extends KokenPlugin {
 	}
 
 	function renderFirst() {
-		echo '<style id="gdpr_css_var">:root {--gdrp-backdrop:'. $this->data->gdprBackdrop .';--gdpr-header-clr:'. $this->data->headLineClr .';--gdpr-ok-topclr:'. $this->data->consentTopClr .';--gdpr-ok-endclr:'. $this->data->consentEndClr .';--gdpr-ok-brdclr:'. $this->data->consentBrdClr .';--gdpr-bkgrd:'. $this->data->gdprBkgrd .';--gdpr-text-clr:'. $this->data->gdprTextClr .';--gdpr-consent-clr:'. $this->data->consentClr .';--gdpr-decline-clr:'. $this->data->declineClr .';}</style>';
-		echo '<link id="gdpr_css" rel="stylesheet" type="text/css" href="'. $this->get_path() .'/css/gdpr.min.css" />';
-		echo '<script id="gdpr_options">const activeForAll='.$this->data->activateAll.';const ignoredCookie=\''.$this->data->ignoredCookie.'\';</script>';
-		echo '<script id="gpdr_head" src="'. $this->get_path() .'/js/cm-head.min.js"></script>';
+		echo '<style class="grpdScript" id="gdpr_css_var">:root {--gdrp-backdrop:'. $this->data->gdprBackdrop .';--gdpr-header-clr:'. $this->data->headLineClr .';--gdpr-ok-topclr:'. $this->data->consentTopClr .';--gdpr-ok-endclr:'. $this->data->consentEndClr .';--gdpr-ok-brdclr:'. $this->data->consentBrdClr .';--gdpr-bkgrd:'. $this->data->gdprBkgrd .';--gdpr-text-clr:'. $this->data->gdprTextClr .';--gdpr-consent-clr:'. $this->data->consentClr .';--gdpr-decline-clr:'. $this->data->declineClr .';}</style>';
+		echo '<link class="grpdScript" id="gdpr_css" rel="stylesheet" type="text/css" href="'. $this->get_path() .'/css/gdpr.min.css" />';
+		echo '<script class="grpdScript" id="gdpr_options">const activeForAll='.$this->data->activateAll.';const ignoredCookie=\''.$this->data->ignoredCookie.'\';</script>';
+		echo '<script class="grpdScript" id="gpdr_head" src="'. $this->get_path() .'/js/cm-head.min.js"></script>';
 	}
 
 	function renderLast() {
@@ -32,7 +32,7 @@ class KokenCommunityGDPR extends KokenPlugin {
 	</div>
 	<div class="copy" title="GDPR Cookie Consent for Koken by Koken Community Support"><a id="kcs" onclick="return !window.open(this.href);" href="https://kokensupport.com" target="_blank"><img class="gdpr-image" src="{$this->get_path()}/eu-flag.svg" />GDPR Cookie Consent for Koken</a></div>
 </div>
-<script id="gdpr_foot" src="{$this->get_path()}/js/cm-body.min.js"></script>
+<script id="gdpr_foot" src="{$this->get_path()}/js/gdpr-consent.min.js"></script>
 HTML;
 		//}
 	}
