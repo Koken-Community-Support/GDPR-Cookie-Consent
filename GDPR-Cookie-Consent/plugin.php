@@ -18,9 +18,7 @@ class KokenCommunityGDPR extends KokenPlugin {
 	}
 
 	function renderLast() {
-		//print_r($_COOKIE);
 		$this->site_data->title = Koken::out('site.title');
-		//if(!isset($_COOKIE['CM_cookieConsent']) && $_COOKIE['CM_cookieConsent'] !=='1' ){
 			echo <<<HTML
 <div id="gdpr_alert">
 	<img class="ue-image" src="{$this->get_path()}/eu-flag.svg" />
@@ -32,9 +30,8 @@ class KokenCommunityGDPR extends KokenPlugin {
 	</div>
 	<div class="copy" title="GDPR Cookie Consent for Koken by Koken Community Support"><a id="kcs" onclick="return !window.open(this.href);" href="https://kokensupport.com" target="_blank"><img class="gdpr-image" src="{$this->get_path()}/eu-flag.svg" />GDPR Cookie Consent for Koken</a></div>
 </div>
-<script id="gdpr_foot" src="{$this->get_path()}/js/gdpr-consent.min.js"></script>
+<script class="grpdScript" id="gdpr_foot" src="{$this->get_path()}/js/gdpr-consent.min.js"></script>
 HTML;
-		//}
 	}
 }
 
