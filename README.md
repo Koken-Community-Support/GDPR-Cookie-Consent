@@ -15,7 +15,7 @@ Full documentation [can be found here](https://varoystrand.se/sidor/gdpr-cookie-
 ## Demo & Downloads
 * [KCS Demo site](https://demo.kokensupport.com)
 * [Baldurs Photography](https://varoystrand.se)
-* [Downloads](https://github.com/Koken-Community-Support/GDPR-Cookie-Consent/releases)
+* [Downloads](https://github.com/Koken-Community-Support/GDPR-Cookie-Consent/releases/latest)
 
 ### Credits
 * Original script by [@zoxxx](https://github.com/zoxxx)
