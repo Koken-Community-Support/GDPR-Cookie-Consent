@@ -10,6 +10,8 @@ GDPR cookie consent for Koken CMS in Javascript effectively prevents setting coo
 * Option to ignore specific cookies
 * Option to restrict to EU locations, or disregards geolocation and display for everyone
 
+Full documentation [can be found here](https://varoystrand.se/sidor/gdpr-cookie-consent-for-koken/)
+
 ## Demo & Downloads
 * [KCS Demo site](https://demo.kokensupport.com)
 * [Baldurs Photography](https://varoystrand.se)
