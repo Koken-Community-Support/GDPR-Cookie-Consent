@@ -9,7 +9,9 @@
 **/
 (function () {
 	if (document.cookie.indexOf('CM_cookieConsent=1') === -1) {
-		if (CM_cookieManager.isGdprZone()) {
+		var gdprSessionKey	= 'gdprDecline';
+		var gdprSessionValue = location.hostname;
+		if ( CM_cookieManager.isGdprZone() && ( sessionStorage.getItem( gdprSessionKey ) !== gdprSessionValue ) ) {
 			var gdprDoc		= document;
 			var classBody	= 'gdpr-consent';
 			var idOverlay	= 'gdpr_backdrop';
@@ -46,6 +48,7 @@
 			buttonConsent.onclick = function () { iConsent(); }
 
 			var removeAlert = function () {
+				sessionStorage.setItem( gdprSessionKey, gdprSessionValue );
 				cleaningUp();
 				/*gdprDoc.body.classList.remove( classBody );
 				gdprDoc.body.removeChild( renderOverlay );
