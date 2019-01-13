@@ -1,7 +1,7 @@
 # GDPR Cookie Consent for Koken CMS
 ![GDPR Cookie Consent for Koken](images/gdpr.svg)
 
-GDPR cookie consent for Koken CMS in Javascript. It effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given.
+GDPR cookie consent for Koken CMS in Javascript effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given.
 
 ![GDPR Cookie Consent](images/readme-hero.svg)
 ## Features

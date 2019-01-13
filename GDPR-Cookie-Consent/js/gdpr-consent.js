@@ -4,7 +4,7 @@
 *	@license MIT
 *	@author: Bjarne Varoystrand (@black_skorpio)
 *	@version 1.0
-*	@description GDPR cookie consent for Koken in Javascript. It effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given.
+*	@description GDPR cookie consent for Koken in Javascript effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given.
 *	@url https://kokensupport.com
 **/
 (function () {

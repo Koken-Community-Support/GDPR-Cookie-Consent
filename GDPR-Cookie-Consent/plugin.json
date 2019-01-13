@@ -1,8 +1,8 @@
 {
 	"name": "GDPR Cookie Consent",
 	"description": "GDPR cookie consent for Koken in Javascript.",
-	"description_long": "GDPR cookie consent in Javascript. It effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given",
 	"documentation": "http://varoystrand.se",
+	"description_long": "GDPR cookie consent in Javascript effectively prevents setting cookies by third party scripts like ad or analytics snippets until an explicit consent is given",
 	"version": "1.0.0",
 	"demo": "http://varoystrand.se",
 	"author": {
