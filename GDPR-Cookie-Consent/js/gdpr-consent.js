@@ -58,7 +58,7 @@
 	} else {
 		/* NOTE If the cookie is set, we can safely remove all traces of the plugin */
 		var AlertDoc	= document;
-		var AlertHeader	= AlertDoc.getElementsByClassName( 'grpdScript' );
+		var AlertHeader	= AlertDoc.getElementsByClassName( 'gdprScript' );
 		var AlertWrap	= AlertDoc.getElementById( 'gdpr_alert' );
 		if( AlertWrap !=null ) AlertDoc.body.removeChild( AlertWrap );
 		// NOTE https://stackoverflow.com/a/10842519/6820262
