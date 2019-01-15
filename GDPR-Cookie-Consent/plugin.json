@@ -217,11 +217,12 @@
 				]
 			}
 		},
-		"ignoredCookie": {
+		"ignoreCookie": {
 			"label": "Ignored Cookie",
 			"type": "string",
-			"value": "session_cookie",
-			"info": "If you really really need session cookie",
+			"value": "",
+			"placeholder": "koken_referrer",
+			"info": "If you really really need the session cookie (The only cookie Koken sets on your visitors is 'koken_referrer')",
 			"dependencies": {
 				"evaluate": "all",
 				"conditions": [
