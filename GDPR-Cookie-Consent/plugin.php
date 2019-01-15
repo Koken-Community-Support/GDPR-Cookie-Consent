@@ -28,7 +28,7 @@ class KokenCommunityGDPR extends KokenPlugin {
 		<button id="consent" class="button gdpr" title="{$this->data->buttonConsent}">{$this->data->buttonConsent}</button>
 		<button id="decline" class="button gdpr" title="{$this->data->buttonDecline}">{$this->data->buttonDecline}</button>
 	</div>
-	<div class="copy" title="GDPR Cookie Consent for Koken by Koken Community Support"><a id="kcs" onclick="return !window.open(this.href);" href="https://kokensupport.com" target="_blank"><img class="gdpr-image" src="{$this->get_path()}/eu-flag.svg" />GDPR Cookie Consent for Koken</a></div>
+	<div class="copy" title="GDPR Cookie Consent for Koken by Koken Community Support"><a id="kcs" onclick="return !window.open(this.href);" href="https://varoystrand.se/sidor/gdpr-cookie-consent-for-koken/" target="_blank"><img class="gdpr-image" src="{$this->get_path()}/eu-flag.svg" />GDPR Cookie Consent for Koken</a></div>
 </div>
 <script class="gdprScript" id="gdpr_foot" src="{$this->get_path()}/js/gdpr-consent.min.js"></script>
 HTML;
