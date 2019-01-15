@@ -220,9 +220,9 @@
 		"ignoreCookie": {
 			"label": "Ignored Cookie",
 			"type": "string",
-			"value": "",
+			"value": "IgnoreNone",
 			"placeholder": "koken_referrer",
-			"info": "If you really really need the session cookie (The only cookie Koken sets on your visitors is 'koken_referrer')",
+			"info": "If you really really need the session cookie change 'IgnoreNone' to i.e 'koken_referrer' (The only cookie Koken sets on your visitors is 'koken_referrer')",
 			"dependencies": {
 				"evaluate": "all",
 				"conditions": [
