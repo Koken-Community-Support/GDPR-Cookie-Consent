@@ -13,7 +13,7 @@ class KokenCommunityGDPR extends KokenPlugin {
 	function renderFirst() {
 		echo '<style class="gdprScript" id="gdpr_css_var">:root {--gdrp-backdrop:'. $this->data->gdprBackdrop .';--gdpr-header-clr:'. $this->data->headLineClr .';--gdpr-ok-topclr:'. $this->data->consentTopClr .';--gdpr-ok-endclr:'. $this->data->consentEndClr .';--gdpr-ok-brdclr:'. $this->data->consentBrdClr .';--gdpr-bkgrd:'. $this->data->gdprBkgrd .';--gdpr-text-clr:'. $this->data->gdprTextClr .';--gdpr-consent-clr:'. $this->data->consentClr .';--gdpr-decline-clr:'. $this->data->declineClr .';}</style>';
 		echo '<link class="gdprScript" id="gdpr_css" rel="stylesheet" type="text/css" href="'. $this->get_path() .'/css/gdpr.min.css" />';
-		echo '<script class="gdprScript" id="gdpr_options">const activeForAll='.$this->data->activateAll.';const ignoredCookie=\''.$this->data->ignoredCookie.'\';</script>';
+		echo '<script class="gdprScript" id="gdpr_options">const gdprCookieName=\''.$this->data->gdprCookieName.'\';const activeForAll='.$this->data->activateAll.';const ignoredCookie=\''.$this->data->ignoredCookie.'\';</script>';
 		echo '<script class="gdprScript" id="gpdr_head" src="'. $this->get_path() .'/js/cm-head.min.js"></script>';
 	}
 

@@ -8,8 +8,8 @@
 *	@url https://kokensupport.com
 **/
 (function () {
-	if (document.cookie.indexOf('CM_cookieConsent=1') === -1) {
 		var gdprManager		= CM_cookieManager;
+	if (document.cookie.indexOf(gdprCookieName+'=1') === -1) {
 		var gdprStorage		= sessionStorage;
 		var gdprSessionKey	= 'gdprDecline';
 		var gdprSessionValue = location.hostname;

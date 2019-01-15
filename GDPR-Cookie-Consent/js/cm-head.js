@@ -14,6 +14,7 @@ var CM_cookieManager = (function() {
 	//const activeForAll = false;
 	// if you really really need session cookie
 	//const ignoredCookie = 'session_cookie';
+	//const gdprCookieName = 'CM_cookieConsent'; // NOTE Added by yours truly
 	var gdprZone = false;
 	var intervalId = -1;
 	var removedCookies = new Array();
@@ -61,7 +62,7 @@ var CM_cookieManager = (function() {
 
 	return {
 		start: function () {
-			if (document.cookie.indexOf('CM_cookieConsent=1') === -1) {
+			if (document.cookie.indexOf(gdprCookieName+'=1') === -1) {
 				var janOffset = new Date(new Date().getFullYear(), 0, 1).getTimezoneOffset();
 				var julOffset = new Date(new Date().getFullYear(), 6, 1).getTimezoneOffset();
 
@@ -79,7 +80,7 @@ var CM_cookieManager = (function() {
 							},
 							set: function (val) {
 								//console.log('Cookie proxy: ' + val);
-								if (val.indexOf('CM_cookieConsent') !== -1 || document.cookie.indexOf('CM_cookieConsent=1') !== - 1 || val.indexOf(ignoredCookie) !== -1) {
+								if (val.indexOf(gdprCookieName) !== -1 || document.cookie.indexOf(gdprCookieName+'=1') !== - 1 || val.indexOf(ignoredCookie) !== -1) {
 									cookieDesc.set.call(document, val);
 								} else {
 									removedCookies.push(val);
@@ -110,7 +111,7 @@ var CM_cookieManager = (function() {
 			var cookieExpString = cookieDate.toGMTString();
 			//console.log(cookieExpString);
 
-			document.cookie = 'CM_cookieConsent=1;expires=' + cookieExpString + ';domain=.' + location.host.split('.').slice(-2).join(".") + ';path=/';
+			document.cookie = gdprCookieName+'=1;expires=' + cookieExpString + ';domain=.' + location.host.split('.').slice(-2).join(".") + ';path=/';
 			var c = '';
 			while (c = removedCookies.pop()) {
 				//console.log(c + ';expires=' + cookieExpString);
