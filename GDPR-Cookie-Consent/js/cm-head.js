@@ -8,7 +8,7 @@
  *	@documentation https://github.com/zoxxx/GDPR-cookie-consent#gdpr-cookie-consent
  *	@url https://github.com/zoxxx/GDPR-cookie-consent
 **/
-var CM_cookieManager = (function() {
+var Koken_cookieManager = (function() {
 	// set activeForAll to true if you want to activate consent management for all visitors regardless of geolocation
 	// if activeForAll is fakse than consent management is only active for EU locations
 	//const activeForAll = false;
@@ -72,7 +72,7 @@ var CM_cookieManager = (function() {
 					// make sure no cookies before me
 					killCookies();
 					var cookieDesc = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') ||
-									Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
+									 Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
 					if (cookieDesc && cookieDesc.configurable) {
 						Object.defineProperty(document, 'cookie', {
 							get: function () {
@@ -127,4 +127,4 @@ var CM_cookieManager = (function() {
 		}
 	}
 }) ();
-CM_cookieManager.start();
+Koken_cookieManager.start();
