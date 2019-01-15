@@ -1,5 +1,5 @@
 /* minifyOnSave, checkOutputFileAlreadyExists: false, checkAlreadyMinifiedFile: false, filenamePattern: $1.min.$2 */
-/*! GDPR-cookie-consent cm-head.js
+/*! GDPR-cookie-consent gdpr-head.js (cm-head.js)
  *	@copyright	(c) 2018 [@zoxxx](https://github.com/zoxxx)
  *	@license Apache License 2.0
  *	@author: [@zoxxx](https://github.com/zoxxx)
